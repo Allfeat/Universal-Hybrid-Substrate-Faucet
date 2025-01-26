@@ -11,8 +11,8 @@ import { Toaster } from "react-hot-toast";
 const space_mono = Space_Mono({ weight: ["400", "700"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Universal Hybrid Substrate Faucet",
-  description: "A one-stop testnet faucet for all the substrate chains",
+  title: "Allfeat Faucet",
+  description: "A one-stop testnet faucet for all the Allfeat chains",
 };
 
 export default function RootLayout({

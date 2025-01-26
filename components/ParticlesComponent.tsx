@@ -44,7 +44,7 @@ const ParticlesComponent = () => {
         },
         modes: {
           push: {
-            quantity: 15,
+            quantity: 10,
           },
           repulse: {
             distance: 150,
@@ -52,42 +52,12 @@ const ParticlesComponent = () => {
         },
       },
       particles: {
-        shape:{
+        shape: {
           type: "image",
           options: {
             image: [
               {
-                src: "/images/beresheet.svg",
-                width: 100,
-                height: 100,
-              },
-              {
-                src: "/images/westend.svg",
-                width: 100,
-                height: 100,
-              },
-              {
-                src: "/images/polkadot-chain.svg",
-                width: 100,
-                height: 100,
-              },
-              {
-                src: "/images/polkadot-chain.svg",
-                width: 100,
-                height: 100,
-              },
-              {
-                src: "/images/paseo.svg",
-                width: 100,
-                height: 100,
-              },
-              {
-                src: "/images/rococo.svg",
-                width: 100,
-                height: 100,
-              },
-              {
-                src: "/images/rococo-contracts.svg",
+                src: "/images/allfeat-testnet.svg",
                 width: 100,
                 height: 100,
               },

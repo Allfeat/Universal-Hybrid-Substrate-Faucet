@@ -203,7 +203,7 @@ export default function Home() {
     setIsSubmitting(false);
   };
 
-const onVerify = async (captchaCode: string | null) => {
+  const onVerify = async (captchaCode: string | null) => {
     setIsSubmitting(true);
     setButtonText("Please Wait");
     if (!captchaCode) {
@@ -326,7 +326,7 @@ const onVerify = async (captchaCode: string | null) => {
                     onChange={(e) =>
                       setUser({ ...user, chain: e.target.value })
                     }
-                    placeholder="Rococo Relay Chain"
+                    placeholder="Melodie | Allfeat Testnet"
                   />
                   {toggle ? (
                     <button
@@ -383,11 +383,10 @@ const onVerify = async (captchaCode: string | null) => {
                             {({ active }) => (
                               <div
                                 onClick={() => getAddress(chain)}
-                                className={`cursor-pointer text-wrap text-start p-2 ${
-                                  active
-                                    ? "bg-[rgba(0,102,255,0.1)] text-[#0066ff]"
-                                    : "text-[#9b9b9b]"
-                                } flex rounded-md items-center w-full text-xs`}
+                                className={`cursor-pointer text-wrap text-start p-2 ${active
+                                  ? "bg-[rgba(0,102,255,0.1)] text-[#0066ff]"
+                                  : "text-[#9b9b9b]"
+                                  } flex rounded-md items-center w-full text-xs`}
                               >
                                 {chain.name}
                               </div>
@@ -451,9 +450,8 @@ const onVerify = async (captchaCode: string | null) => {
                   <span className="text-[#9b9b9b] text-xs h-3 w-full">
                     {user.chain === ""
                       ? ""
-                      : `You can request up to ${
-                          switcherMode?.threshold! * 0.001
-                        } ${switcherMode?.nativeCurrency.symbol} tokens.`}{" "}
+                      : `You can request up to ${switcherMode?.threshold! * 0.001
+                      } ${switcherMode?.nativeCurrency.symbol} tokens.`}{" "}
                   </span>
                 </div>
               )}

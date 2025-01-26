@@ -5,7 +5,7 @@ import { useFaucetContext } from "@/context";
 import { Menu } from "@headlessui/react";
 import { decodeAddress, encodeAddress } from "@polkadot/util-crypto";
 import { MouseEvent, useRef, useState, useEffect, KeyboardEvent } from "react";
-import { LuChevronsUpDown, LuCheckSquare } from "react-icons/lu";
+import { LuChevronsUpDown } from "react-icons/lu";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import axios, { AxiosError } from "axios";
 import { toast } from "react-hot-toast";
@@ -15,6 +15,7 @@ import SyncLoader from "react-spinners/SyncLoader";
 import Toast from "@/components/Toast";
 import { TbAlertSquareRounded } from "react-icons/tb";
 import { disburse } from "@/lib/utils";
+import { PiCheckSquare } from "react-icons/pi";
 
 export type Disburse = {
   chain: string;
@@ -149,7 +150,7 @@ export default function Home() {
               (t) => (
                 <Toast
                   t={t}
-                  Icon={LuCheckSquare}
+                  Icon={PiCheckSquare}
                   className="text-green-500 h-5 w-5"
                   message={`Successful! Sent ${d.amount} ${d.symbol} to ${d.address}`}
                 />
@@ -238,7 +239,7 @@ export default function Home() {
                 (t) => (
                   <Toast
                     t={t}
-                    Icon={LuCheckSquare}
+                    Icon={PiCheckSquare}
                     className="text-green-500 h-5 w-5"
                     message={`Successful! Sent ${d.amount} ${d.symbol} to ${d.address}`}
                   />

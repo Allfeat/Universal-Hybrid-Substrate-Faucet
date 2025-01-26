@@ -7,9 +7,9 @@ import HCaptcha from "@hcaptcha/react-hcaptcha";
 import Toast from "./Toast";
 import { TbAlertSquareRounded } from "react-icons/tb";
 import axios, { AxiosError } from "axios";
-import { LuCheckSquare } from "react-icons/lu";
 import { useFaucetContext } from "@/context";
 import { Disburse } from "@/app/page";
+import { PiCheckSquare } from "react-icons/pi";
 
 function FaucetForm(
   { url,
@@ -18,7 +18,7 @@ function FaucetForm(
     setButtonText,
     setIsSubmitting,
     isSubmitting
-   }: {
+  }: {
     url: string;
     address: string;
     buttonText: string;
@@ -26,7 +26,7 @@ function FaucetForm(
     setIsSubmitting: (submitting: boolean) => void;
     isSubmitting: boolean
   }) {
-  const chain = chains.find((a) => a.url === url)?? chains[0];
+  const chain = chains.find((a) => a.url === url) ?? chains[0];
   const captchaRef = useRef<HCaptcha>(null);
   const { state, user, setUser } = useFaucetContext();
 
@@ -74,7 +74,7 @@ function FaucetForm(
               (t) => (
                 <Toast
                   t={t}
-                  Icon={LuCheckSquare}
+                  Icon={PiCheckSquare}
                   className="text-green-500 h-5 w-5"
                   message={`Successful! Sent ${d.amount} ${d.symbol} to ${d.address}`}
                 />
@@ -155,7 +155,7 @@ function FaucetForm(
                 (t) => (
                   <Toast
                     t={t}
-                    Icon={LuCheckSquare}
+                    Icon={PiCheckSquare}
                     className="text-green-500 h-5 w-5"
                     message={`Successful! Sent ${d.amount} ${d.symbol} to ${d.address}`}
                   />
@@ -247,7 +247,7 @@ function FaucetForm(
     }
   };
 
-  return(
+  return (
     <form onSubmit={handleSubmit} className="sm:flex hidden flex-col items-center justify-center gap-[8px] p-[4px] bg-[#131313] rounded-[12px]">
       <div className="flex flex-col gap-[8px] items-center justify-center">
         <div className="max-w-[568px] w-[100vw] bg-[#1b1b1b] flex flex-col space-y-[3px] items-start justify-center p-4 rounded-[12px] border-2 border-[#202020] focus-within:border-[#404040]">
@@ -344,7 +344,7 @@ export default function Faucet({ url, address }: { url: string, address: string 
       {isLoading ? (
         <Loading />
       ) : (
-        <FaucetForm address={address} url={url} buttonText={buttonText} setButtonText={setButtonText} setIsSubmitting={setIsSubmitting} isSubmitting={isSubmitting}  />
+        <FaucetForm address={address} url={url} buttonText={buttonText} setButtonText={setButtonText} setIsSubmitting={setIsSubmitting} isSubmitting={isSubmitting} />
       )}
     </div>
   );

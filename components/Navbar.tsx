@@ -35,7 +35,6 @@ const Navbar = (): React.JSX.Element => {
           {path && path !== "/" && path !== "/status" && <li className="text-[#EAEAEA] underline underline-offset-8 cursor-pointer"><p>{chains.find((c) => c.url === path.split("/")[1])?.name}</p></li>}
         </ul>
       </div>
-      <ConnectWallet />
     </nav>
   );
 };
